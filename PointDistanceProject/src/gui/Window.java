@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class Window extends JFrame  {
 	
-	//Constants
+	//--------------Constants---------------------\\
 		
 	public static final String VERSION = "0.1.0";
 	
@@ -18,13 +18,27 @@ public class Window extends JFrame  {
 	public static final int HEIGHT = 200;
 	public static final int INTERVAL = 1000;
 	
+	public static final int POINT_DIAMETER = 8;
 	
-	//Variables
+	
+	//--------------Member variables--------------\\
+	
+	//Points
+	
+	//Panel related vars
 	private static JPanel topPanel;
+	private static JPanel midPanel;
 	private static JPanel botPanel;
+	
+	//Graph related vars
+	
+	
+	
+	//Progress bar related vars
 	private static Timer timer;
 	private static JProgressBar progressBar;
 	
+	//File related vars
 	private File pointsFile;
 	private File limitsFile;
 	private File outputFile;
@@ -57,6 +71,8 @@ public class Window extends JFrame  {
 		topPanel.add(limitsLabel);
 		topPanel.add(limitsBrowse);
 		add(topPanel,BorderLayout.NORTH);
+		
+		//Point graph
 		
 		
 		//Progress Bar and run button panel
